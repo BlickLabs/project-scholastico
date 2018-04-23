@@ -1,4 +1,7 @@
 .home
+  &-container
+    position relative
+
   &-cover
     align-items center
     background-image url("../img/backgrounds/home-cover.jpg")
@@ -8,20 +11,69 @@
     display flex
     height 607px
     padding-left 125px
+    position relative
+    z-index 1
 
     &-title
       &-container
         margin-bottom 50px
         max-width 645px
 
+    &-button
+      box-shadow 0 27px 30px 0 rgba(0, 0, 0, 0.5)
+      height 62px
+
   &-section
     &-title
       &-container
         margin-left 50px
 
+  &-bg
+    &-one
+      background-image url("../img/backgrounds/home-bg-1.png")
+      background-position center
+      background-repeat no-repeat
+      background-size 100%
+      height 790px
+      position absolute
+      right 0
+      top 250px
+      width 500px
+      z-index 1
+
+    &-two
+      background-image url("../img/backgrounds/home-bg-2.png")
+      background-position center
+      background-repeat no-repeat
+      background-size 100%
+      height 1226px
+      position absolute
+      right 0
+      top 0
+      width 687px
+
+    &-four
+      background-image url("../img/backgrounds/home-bg-4.png")
+      background-position center
+      background-repeat no-repeat
+      background-size 100%
+      height 800px
+      left 0
+      position absolute
+      top -230px
+      width 210px
+
+  &-merge
+    background-image url("../img/backgrounds/home-bg-3.jpg")
+    background-position center -335px
+    background-repeat no-repeat
+    background-size cover
+
   &-need
     margin 130px auto 160px auto
+    position relative
     width 1133px
+    z-index 1
 
     &-icon
       &-school
@@ -50,11 +102,38 @@
       margin-top 70px
       width 1133px
 
+      &-card
+        box-shadow 0 27px 40px 0 rgba(0, 0, 0, 0.18)
+        cursor pointer
+        height 430px
+        opacity 0
+        padding 0 58px
+        position absolute
+        transition all 0.3s ease-out
+        visibility hidden
+        width 342px
+
+        &-paragraph
+          margin 18px 0 35px 0
+
       &-content
         align-items center
         display flex
         flex-direction column
+        position relative
         width 377px
+
+        &:hover .home-need-panel-card
+          background-color $sWhite
+          bottom 0
+          display flex
+          flex-direction column
+          justify-content center
+          margin auto
+          opacity 1
+          top 0
+          transition all 0.3s ease-out
+          visibility visible
 
       &-title
         text-align center
@@ -78,15 +157,36 @@
 
     &-card
       align-items center
+      background-color $sWhite
       box-shadow 0 27px 40px 0 rgba(0, 0, 0, 0.17)
       display flex
       flex-direction column
       height 356px
       padding-top 50px
+      position relative
       width 349px
 
       &:nth-child(2)
         margin 0 43px
+
+      &-hover
+        bottom 0
+        left 0
+        display none
+        opacity 0
+        position absolute
+        right 0
+        top 0
+        transition 0.3s
+        z-index 1
+
+        &:hover
+          display block
+          opacity 1
+
+      &-img
+        height 100%
+        width 100%
 
     &-separator
       background-color $sGray
@@ -105,7 +205,7 @@
         position relative
 
       &-bullet
-        background-color $sGreen
+        background-color $sGreenLight
         height 6px
         left -20px
         position absolute
@@ -118,9 +218,14 @@
       justify-content center
 
   &-thanks
+    background-image url("../img/backgrounds/home-bg-5.png")
+    background-position right 0 bottom -90px
+    background-repeat no-repeat
+    background-size 188px
     display flex
     flex-direction row
-    margin 140px 160px 140px 75px
+    padding 140px 160px 140px 75px
+    position relative
 
     &-img
       height 644px
@@ -128,15 +233,26 @@
 
       &-container
         margin-right 100px
+        z-index 1
+
+    &-info
+      margin-top 18px
+      max-width 425px
 
     &-separator
-      background-color $sGreen
+      background-color $sGreenLight
       height 1px
       margin 35px 0
       width 100%
 
     &-hours
       color $sBlackStrong
+
+    &-serve
+      color $sBlackStrong
+
+    &-button-container
+      margin-top 45px
 
   &-certifications
     align-items center
@@ -166,3 +282,180 @@
         height 129px
         margin-right 28px
         width 258px
+
+.home-units-card-hover.card-opacity
+  display block
+  opacity 1
+  transition 0.3s
+
+@media screen and (max-width 768px)
+  .home
+    &-cover
+      height 430px
+      padding 0 50px 0 35px
+
+    &-bg
+      &-one
+        height 283px
+        top 290px
+        width 180px
+
+      &-two
+        height 412px
+        top 219px
+        width 230px
+
+      &-four
+        height 280px
+        top -80px
+        width 110px
+
+    &-need
+      margin 60px auto 100px auto
+      width 260px
+
+      &-panel
+        flex-direction column
+        height auto
+        width 260px
+
+        &-content
+          height 350px
+          justify-content center
+          width 260px
+
+        &-card
+          width 280px
+
+      &-separator
+        height 1px
+        width 230px
+
+    &-units
+      &-content
+        width 100%
+
+      &-cards
+        &-container
+          align-items center
+          flex-direction column
+          margin 50px 0
+          width 100%
+
+      &-card
+        width 270px
+
+        &:nth-child(2)
+          margin 30px 0
+
+    &-thanks
+      background-size 120px
+      flex-direction column
+      padding 60px 30px 90px 30px
+
+      &-img
+        height auto
+        width 100%
+
+        &-container
+          margin 0 auto
+          width 70%
+
+    &-certifications
+      height auto
+      padding 60px 0
+
+      &-container
+        flex-wrap wrap
+        justify-content center
+        margin-top 40px
+        width 100%
+
+      &-img
+        height auto
+        width 100%
+
+        &-container
+          height auto
+          margin-right 0
+          width 40%
+
+          &:nth-child(2n + 1)
+            margin-right 10px
+
+          &:nth-child(-n + 2)
+            margin-bottom 10px
+
+@media screen and (min-width 769px) and (max-width 1170px)
+  .home
+    &-need
+      padding 0 30px
+      width 100%
+
+      &-panel
+        width 100%
+
+    &-units
+      &-content
+        margin 0
+        padding 0 30px
+        width 100%
+
+      &-cards
+        &-container
+          width 100%
+
+      &-card
+        width 100%
+
+    &-certifications
+      height 500px
+
+      &-content
+        width 536px
+
+      &-container
+        flex-wrap wrap
+        width 536px
+
+      &-img
+        &-container
+          margin-right 0
+
+          &:nth-child(2n + 1)
+            margin-right 20px
+
+          &:nth-child(-n + 2)
+            margin-bottom 20px
+
+@media screen and (min-width 769px) and (max-width 1262px)
+  .home
+    &-thanks
+      padding 140px 50px 140px 50px
+
+      &-img
+        height auto
+        width 100%
+
+        &-container
+          margin-right 50px
+          width 90%
+
+@media screen and (min-width 769px) and (max-width 998px)
+  .home
+    &-units
+      &-content
+        width 100%
+
+      &-cards
+        &-container
+          align-items center
+          flex-direction column
+          margin 50px 0
+          width 100%
+
+      &-card
+        width 270px
+
+        &:nth-child(2)
+          margin 30px 0
