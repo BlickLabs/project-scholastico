@@ -57,3 +57,36 @@
     height 77px
     margin 0 76px
     width 1px
+
+@media screen and (max-width 768px)
+  .footer
+    flex-direction column
+
+    &-logo
+      height 70px
+
+      &-mercedes
+        height 15px
+        width 140px
+
+    &-info-container
+      align-items center
+      flex-direction column
+      margin-left 0
+
+    &-separator
+      height 1px
+      margin 20px 0
+      width 100%
+
+@media screen and (min-width 769px) and (max-width 1100px)
+  .footer
+    &-info-container
+      margin-left 40px
+
+    &-icon
+      &-container
+        margin-left 40px
+
+    &-separator
+      margin 0 40px
