@@ -1,19 +1,27 @@
 .navbar
   align-items center
-  background transparent
+  background-color transparent
   display flex
-  height 116px
+  height 110px
   justify-content space-between
   left 0
   padding 0 120px
   position fixed
   top 0
+  transition 0.4s all ease
   width 100%
   z-index 12
 
+  &-scroll
+    background-image url("../img/backgrounds/navbar-bg.jpg")
+    background-position right
+    background-repeat no-repeat
+    background-size cover
+    transition 0.4s all ease
+
   &-logo
-    height 62px
-    width 175px
+    height 56px
+    width 160px
 
   &-sites
     &-container
@@ -27,7 +35,7 @@
 
       &:hover
         .navbar-link
-          background-color $sGreen
+          background-color $sGreenLight
           height 3px
           opacity 1
           transition 0.3s
@@ -43,10 +51,153 @@
     opacity 0
     position absolute
     right 0
-    top 0
+    top -9px
     transition 0.3s
 
     &-selected
-      background-color $sGreen
+      background-color $sGreenLight
       height 3px
       opacity 1
+
+.hamburger-menu-container
+  display none
+
+.navbar-hamburguer-visibility
+  position absolute
+
+@media screen and (max-width: 998px)
+  .navbar
+    height 70px
+    padding 0 18px
+
+    &-logo
+      height 35px
+      width 100px
+
+  .navbar-sites-container
+    display none
+
+  .navbar-option-link
+    display block
+    height auto
+    display block
+    text-align left
+    flex-basis 100%
+
+  .navbar-hamburguer-visibility
+    position initial
+      
+  .navbar-hamburguer
+    width 33px
+    height 33px
+    border-radius 50%
+    background-color $sGreenLight
+    cursor pointer
+    display flex
+    justify-content center
+    transition 0.3s
+
+    &:hover
+      background-color $sGreen
+      transition 0.3s
+    
+  .align-content-hamburguer
+    display flex
+    flex-direction column
+    justify-content center
+    
+  .line-hamburguer-base
+    height 1px
+    background-color #fff
+
+  .line-hamburguer-lg
+    width: 15px
+    
+  .line-hamburguer-md
+    width 7.5px
+    
+  .margin-vertical-4px
+    margin 4px 0px
+
+  .hamburger-menu-container
+    background linear-gradient(to left ,$sGreenLight, $sGreen, $sGreenStrong)
+    display inline
+    left 0
+    padding-bottom 50px
+    position fixed
+    top 0
+    width 0%
+    z-index 13
+    bottom 0
+    overflow scroll
+    -webkit-transition width 0.5s
+    transition width 0.5s
+    
+  .hamburger-menu-header
+    align-items center
+    display flex
+    flex-direction row
+    justify-content space-between
+    padding 22px 36px 50px 36px
+    
+  .hamburger-logo
+    height 35px
+    width 100px
+    
+  .hamburger-close-container
+    cursor pointer
+    
+  .hamburger-close
+    height 16px
+    width 16px
+
+  .hamburger-menu-body
+    margin-left 36px
+
+  .hamburger-option-link
+    color #fff
+    cursor pointer
+    font-size remify(12)
+    letter-spacing 1.4px
+    margin 20px 0
+    text-transform uppercase
+
+    &:hover
+      .hamburger-text
+        font-weight bold
+        transition all 0.4s
+
+  .link-decorator
+    background-color #ffffff
+    transition all 0.4s
+
+  .hamburger-text
+    padding 10px 0
+
+    &-active
+      font-weight bold
+
+  .hamburger-dropdown-container
+    position relative
+
+  .down-triangle-container
+    left 80px
+    right initial
+
+  .hamburger-text-container
+    margin 30px 0
+
+  .dropdown
+    display initial
+
+  .dropdown-content
+    box-shadow initial
+    margin-left -36px
+    position relative
+
+    & a
+      padding-left 36px
+
+@media screen and (min-width 769px) and (max-width 1170px)
+  .navbar
+    padding 0 40px
