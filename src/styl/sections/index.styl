@@ -85,10 +85,12 @@
         width 48px
 
       &-tourist
-        height 66px
+        height 53px
         width 54px
 
       &-container
+        align-items center
+        display flex
         height 72px
         margin-bottom 40px
 
@@ -231,6 +233,9 @@
       height 644px
       width 491px
 
+      &-mobile
+        display none
+
       &-container
         margin-right 100px
         z-index 1
@@ -238,6 +243,10 @@
     &-info
       margin-top 18px
       max-width 425px
+
+    &-first
+      &-paragraph
+        margin 30px 0 35px 0
 
     &-separator
       background-color $sGreenLight
@@ -297,11 +306,13 @@
     &-bg
       &-one
         height 283px
+        right -100px
         top 290px
         width 180px
 
       &-two
         height 412px
+        right -100px
         top 219px
         width 230px
 
@@ -309,6 +320,12 @@
         height 280px
         top -80px
         width 110px
+
+    &-section
+      &-title
+        &-container
+          margin-left 0
+          text-align center
 
     &-need
       margin 60px auto 100px auto
@@ -354,12 +371,16 @@
       padding 60px 30px 90px 30px
 
       &-img
-        height auto
-        width 100%
+        display none
+
+        &-mobile
+          display block
+          height auto
+          width 100%
 
         &-container
           margin 0 auto
-          width 70%
+          width 100%
 
     &-certifications
       height auto
