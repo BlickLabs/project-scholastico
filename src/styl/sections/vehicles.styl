@@ -1,0 +1,160 @@
+.vehicles
+  background-image url("../img/backgrounds/background-vehicles.png")
+  background-position right bottom 370px
+  background-repeat no-repeat
+  background-size 358px
+  margin 185px 0 12px 0
+
+  &-info
+    display flex
+    flex-direction row
+    justify-content center
+    margin-bottom 83px
+
+    &-img
+      height 392px
+      width 489px
+
+      &-container
+        margin-right 70px
+        width 489px
+
+    &-title
+      &-container
+        margin 14px 0 40px 0
+
+    &-content
+      max-width 492px
+
+      & p
+        margin-bottom 30px
+        text-align justify
+
+  &-card
+    &-container
+      background-color $sWhite
+      box-shadow 0 27px 40px 0 rgba(0, 0, 0, 0.18)
+      height 430px
+      margin 0 auto 48px auto
+      width 1067px
+
+    &-content
+      display flex
+      flex-direction row
+      padding 76px 88px
+      position relative
+
+      &-info
+        max-width 418px
+        min-width 418px
+        text-align justify
+
+    &-logo
+      &-mercedes
+        height 22px
+        width 197px !important
+
+      &-volkswagen
+        height 31px
+        width 179px !important
+
+      &-nissan
+        height 21px
+        width 150px !important
+
+    &-title
+      color $sBlackLight
+      font-size remify(18px)
+      letter-spacing -0.1px
+      line-height 30px
+
+      &-container
+        margin 35px 0 30px 0
+
+    &-img
+      width 100%
+
+      &-container
+        margin-left 70px
+        width 100%
+
+  &-navigation
+    &-controls
+      bottom 17px
+      position absolute
+      right 22px
+
+      & .owl-nav
+        display flex
+        flex-direction row
+
+        & .owl-prev
+          margin-right 9px
+
+    &-arrows
+      height 48px
+      width 48px
+
+.fs-19
+  color #7a7a7a
+  font-size remify(19px)
+  line-height 34px
+
+@media screen and (max-width 1100px)
+  .vehicles
+    padding 0 30px
+
+    &-info
+      align-items center
+      flex-direction column
+
+      &-img
+        &-container
+          margin 0 0 30px 0
+
+    &-card
+      &-container
+        height auto
+        width 100%
+
+      &-content
+        align-items center
+        flex-direction column
+        padding 40px 88px 30px 88px
+
+      &-img
+        &-container
+          margin 40px 0 0 0
+          width 50%
+
+@media screen and (max-width 600px)
+  .vehicles
+    background-size 170px
+    margin-top 110px
+
+    &-info
+      &-img
+        height 232px
+        width 290px
+
+        &-container
+          width 290px
+
+    &-card
+      &-content
+        padding 45px 30px 30px 30px
+
+        &-info
+          max-width 100%
+          min-width 100%
+
+      &-img
+        &-container
+          width 90%
+
+    &-navigation
+      &-controls
+        bottom -26px
+
+  .fs-19
+    line-height 26px
