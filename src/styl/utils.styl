@@ -12,3 +12,32 @@
   align-items center
   display flex
   justify-content center
+
+.scholastico
+  &-list
+    &-item
+      position relative
+
+      &:before
+        background-color #b5e030
+        content ""
+        display block
+        height 7px
+        left -27px
+        position absolute
+        top 20px
+        transform rotate(45deg)
+        width 7px
+
+  &-navigation
+    &-controls .owl-nav
+      display flex
+      flex-direction row
+      justify-content space-between
+      margin 0 auto
+      width 111px
+
+    &-arrows
+      background-color $sWhite
+      height 50px
+      width 50px
