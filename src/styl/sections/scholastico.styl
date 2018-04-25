@@ -1,5 +1,10 @@
 .scholastico
+  background-image url("../img/backgrounds/clients-background-bottom.png")
+  background-position bottom
+  background-repeat no-repeat
+  background-size 100%
   margin 178px 0 0 0
+  position relative
 
   &-content
     margin 0 auto
@@ -15,12 +20,15 @@
 
   &-card
     &-content
+      background-color $sWhite
       box-shadow 0 27px 40px 0 rgba(0, 0, 0, 0.18)
       height 430px
       margin-bottom 30px
       min-width 342px
       padding 64px 24px 0 52px
+      position relative
       width 342px
+      z-index 1
 
       &:nth-child(2)
         margin 0 30px
@@ -55,6 +63,17 @@
       &-highlighted
         color #76b835
 
+  &-background
+    background-image url("../img/backgrounds/scholastico-background-right.png")
+    background-position center
+    background-repeat no-repeat
+    background-size 100%
+    bottom -141px
+    height 1163px
+    position absolute
+    right 0
+    width 525px
+
   &-banner.services-banner
     margin 115px 0 0 0
 
@@ -76,6 +95,8 @@
 
 @media screen and (max-width 768px)
   .scholastico
+    margin-top 130px
+
     &-content
       max-width 305px
 
